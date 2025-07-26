@@ -2,14 +2,18 @@ package com.pavi.service;
 
 import com.pavi.model.Book;
 import com.pavi.repository.BookRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Service
 public class LibraryServiceImpl implements LibraryService{
 
     private final BookRepository bookRepository;
 
+    @Autowired
     public LibraryServiceImpl(BookRepository bookRepository){
         this.bookRepository = bookRepository;
     }
